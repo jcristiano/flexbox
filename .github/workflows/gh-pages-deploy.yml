@@ -26,6 +26,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          deploy_key: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./dist  # Certifique-se de que este seja o diretório de saída do seu build Vue.js
           publish_branch: gh-pages  # A branch onde as páginas serão implantadas
 
